@@ -27,7 +27,10 @@ from tensorflow.keras.layers import LeakyReLU,add,Reshape
 from  tensorflow.keras.layers import GlobalAveragePooling1D
 from tensorflow.keras.layers import DepthwiseConv1D
 
-
+'''
+dilation_rate=m ——> dilated convolution,当为空洞卷积时，效果较差；
+当存在自注意力时，即AM==True时，效果不好； 
+'''
 
 
 
@@ -36,7 +39,7 @@ def mixconv(x,channal=64,kersize=64,m=1,c=1,AM=True):
      #depth_conv_1=Conv1D(64,kersize ,padding='same')(x)
      act_2 = tf.nn.relu(depth_conv_1)
      bn_2 = BatchNormalization()(act_2)
-     if AM==True:  #自注意力，但效果不好 
+     if AM==True: 
          #add_1 = ECA(bn_2,64,3)
          #add_1 = CHSP1(bn_2,64,4)
          #add_1=A_CAM(bn_2,128)
