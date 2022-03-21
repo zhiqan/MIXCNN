@@ -131,7 +131,7 @@ ADAM=tf.keras.optimizers.Adam(lr=0.001, beta_1=0.99, beta_2=0.999, epsilon=1e-8)
 MIXCNN.compile(optimizer=ADAM,
             loss='mean_squared_error',
             metrics=['accuracy'])  
-#print(wdcnn_multi.summary()) 'mean_squared_error' 
+#print(MIXCNN.summary()) 'mean_squared_error' 
 #'binary_crossentropy'损失函数效果要比mean_squared_error；差0.005左右
 
 
