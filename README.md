@@ -1,1 +1,1 @@
-# MIXCNN, TF2.0
+# MIXCNN, TF2
