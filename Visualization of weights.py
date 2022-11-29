@@ -137,10 +137,10 @@ for layer in MIXCNN.layers:
     conv_name = layer.name
 
 a1 = x_test[0][np.newaxis, :, :]
-heatmap1 = grad_cam(wdcnn_multi1, a1, category_index, conv_name,10)
+heatmap1 = grad_cam(MIXCNN, a1, category_index, conv_name,10)
 
 import scipy.io as scio
-dataNew = "D:\\apcnn_datanew_8.mat"
+dataNew = "D:\\MIXCNN_datanew_8.mat"
 d = np.arange(1,1024,1)
 scio.savemat(dataNew, mdict={'cam': heatmap1, 'data': a1, 'suzu': d})
 
@@ -164,7 +164,7 @@ for layer in MIXCNN.layers:
 a = x_test[2023][np.newaxis, :, :]
 heatmap = grad_cam(MIXCNN, a, category_index, conv_name,10)
 
-dataNew = "D:\\f2_datanew_4-1.mat"
+dataNew = "D:\\MIXCNN_datanew_4-1.mat"
 d = np.arange(1,1024,1)
 scio.savemat(dataNew, mdict={'cam2': heatmap, 'data': a, 'suzu': d})
 
