@@ -14,11 +14,11 @@ This paper proposes the CNN with mixed information (MIXCNN), a classification mo
 @ARTICLE{9964316,
   author={Zhao, Zhiqian and Jiao, Yinghou},
   journal={IEEE Transactions on Industrial Informatics}, 
-  title={A fault diagnosis method for rotating machinery based on CNN with mixed information}, 
-  year={2022},
-  volume={},
-  number={},
-  pages={1-11},
+  title={A Fault Diagnosis Method for Rotating Machinery Based on CNN With Mixed Information}, 
+  year={2023},
+  volume={19},
+  number={8},
+  pages={9091-9101},
   doi={10.1109/TII.2022.3224979}}
 ```
 
